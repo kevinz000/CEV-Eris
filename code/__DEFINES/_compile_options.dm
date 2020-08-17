@@ -3,7 +3,3 @@
 
 #define ZLEVELS	// Enables multi-z support in ZAS, comment out to disable it
 
-/*
-* Enables extools-powered reference tracking system, letting you see what is referencing objects that refuse to hard delete.
-*/
-#define REFERENCE_TRACKING
