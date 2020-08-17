@@ -46,7 +46,7 @@ ADMIN_VERB_ADD(/client/proc/debug_variables, R_ADMIN | R_MOD, FALSE)
 					<td width='50%'>
 						<table align='center' width='100%'><tr>
 							[sprite ? "<td><img src='view_vars_sprite.png'></td>" : ""]
-							<td><div align='center'>[D.get_view_variables_header()]</div></td>
+							<td><div align='center'>[istype(D) && D.get_view_variables_header()]</div></td>
 						</tr></table>
 						<div align='center'>
 							<b><font size='1'>[replacetext("[D.type]", "/", "/<wbr>")]</font></b>
