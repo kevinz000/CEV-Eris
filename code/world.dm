@@ -1,6 +1,4 @@
-/*
-* Enables extools-powered reference tracking system, letting you see what is referencing objects that refuse to hard delete.
-*/
+
 #define REFERENCE_TRACKING
 
 /*
@@ -77,8 +75,8 @@ var/game_id = null
 	// End extools
 	//logs
 	var/date_string = time2text(world.realtime, "YYYY/MM-Month/DD-Day")
-		href_logfile = file("data/logs/[date_string] hrefs.htm")
-		diary = file("data/logs/[date_string].log")
+	href_logfile = file("data/logs/[date_string] hrefs.htm")
+	diary = file("data/logs/[date_string].log")
 	diary << "[log_end]\n[log_end]\nStarting up. (ID: [game_id]) [time2text(world.timeofday, "hh:mm.ss")][log_end]\n---------------------[log_end]"
 	changelog_hash = md5('html/changelog.html')					//used for telling if the changelog has changed recently
 
