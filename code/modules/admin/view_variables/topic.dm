@@ -24,6 +24,17 @@
 		M.fully_replace_character_name(M.real_name,new_name)
 		href_list["datumrefresh"] = href_list["rename"]
 
+#ifdef REFERENCE_TRACKING
+
+	else if(href_list["reference_tracking"])
+		var/D = locate(href_list["reference_tracking"])
+		if(!D)
+			to_chat(usr, "Couldn't find [href_list["reference_tracking"]].")
+			return
+		holder.view_refs(D)
+
+#endif
+
 	else if(href_list["varnameedit"] && href_list["datumedit"])
 		if(!check_rights(R_ADMIN))
 			return

@@ -35,7 +35,9 @@
 /client/proc/get_view_variables_options()
 	return ""
 /datum/proc/get_view_variables_options()
-	return ""
+	return {"
+		<option value='?_src_=vars;reference_tracking=\ref[src]'>Reference Tracking</option>
+	"}
 
 /mob/get_view_variables_options()
 	return ..() + {"

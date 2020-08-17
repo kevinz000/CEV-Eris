@@ -66,6 +66,10 @@ var/game_id = null
 	extools_initialize()
 	maptick_initialize()
 	debugger_initialize()
+
+#ifdef REFERENCE_TRACKING
+	enable_reference_tracking()
+#endif
 	// End extools
 	//logs
 	var/date_string = time2text(world.realtime, "YYYY/MM-Month/DD-Day")
